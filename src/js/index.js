@@ -7,7 +7,10 @@ const buttonGenerateChart = document.getElementById('buttonGenerateChart');
   console.log(beginTime);
 }*/ 
 
-const console = document.getElementById('console');
+
+
+function generateChart() {
+  const console = document.getElementById('console');
 
 const requestURL = 'src/js/data.json';
 const request = new XMLHttpRequest();
@@ -19,32 +22,39 @@ request.send();
 
 request.onload = function() {
   const superHeroes = request.response;
-  populateHeader(superHeroes);
   
+  showHeroes(superHeroes);
 }
 
-function populateHeader(jsonObj) {
+function showHeroes(jsonObj) {
+  var heroes = jsonObj['events'];
 
-  const myPara = document.createElement('p');
-  myPara.textContent = 
-  ' type: ' + jsonObj['type'] + ',' +
-  ' timestamp: ' + jsonObj['timestamp'] + ',' +
-  ' os: ' + jsonObj['os'] + ',' +
-  ' browser: ' + jsonObj['browser'] + ',' +
-  ' min_response_time: ' + jsonObj['min_response_time'] + ',' +
-  ' max_response_time: ' + jsonObj['max_response_time'];
-
-  console.appendChild(myPara);
+  for (var i = 0; i < heroes.length; i++) {
+    var myArticle = document.createElement('article');
+    var p1 = document.createElement('p');
+ 
+    p1.textContent = 
+    ' type: ' + heroes[i].type + ',' +
+    ' timestamp: ' + heroes[i].timestamp + ',' +
+    ' os: ' + heroes[i].os + ',' +
+    ' browser: ' + heroes[i].browser + ',' +
+    ' min_response_time: ' + heroes[i].min_response_time + ',' +
+    ' max_response_time: ' + heroes[i].max_response_time;
+ 
+    myArticle.appendChild(p1);
+  
+    console.appendChild(myArticle);
+  }
 }
 
 
-function generateChart() {
+
   const context = document.getElementById('myChart').getContext('2d');
   const myChart = new Chart(context, {
     type: 'line',
     data: {
 
-      labels: ['00:00', '00:00'],
+      labels: ['00:00', '00:01'],
       datasets: [
         {
           label: 'Linux Chrome Min Response Time',
@@ -53,7 +63,7 @@ function generateChart() {
           borderColor: "#7CCD7C",
           fill: false,
           lineTension: 0,
-          radius: 5
+          radius: 5,
         },
         {
           label: 'Linux Chrome Max Response Time',
@@ -71,7 +81,7 @@ function generateChart() {
           borderColor: "#8968CD",
           fill: false,
           lineTension: 0,
-          radius: 5
+          radius: 5,
         },
         {
           label: 'Mac Chrome Max Response Time ',
@@ -94,6 +104,7 @@ function generateChart() {
         {
           label: 'Linux Firefox Max Response Time',
           data: [76, 88],
+          
           backgroundColor: "#104E8B",
           borderColor: "#104E8B",
           fill: false,
@@ -116,7 +127,7 @@ function generateChart() {
           borderColor: "#FF7F00",
           fill: false,
           lineTension: 0,
-          radius: 5
+          radius: 5,
         }
       ]
     },
@@ -124,7 +135,8 @@ function generateChart() {
     options: {
       scales: {
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          display: false // exclude the numbers in the vertical position
         }
       },
       plugins: {
@@ -138,8 +150,12 @@ function generateChart() {
             boxWidth: 8,
             boxHeight: 8,
             usePointStyle: true,
+            color: [
+              "black",
+                     
+            ],
             textAlign: 'left',
-            padding: 12
+            padding: 12      
           }
         }
       },
@@ -149,32 +165,3 @@ function generateChart() {
 
 buttonGenerateChart.addEventListener('click', generateChart);
 // buttonGenerateChart.addEventListener('click', time);
-
-/* this can be good in the future
-
-  const defaultLegendClickHandler = Chart.defaults.plugins.legend.onClick;
-  function clickLegend (e, legendItem, legend) {
-    var index = legendItem.datasetIndex;
-
-    if (index > 1) {
-        // Do the original logic
-        defaultLegendClickHandler(e, legendItem, legend);
-    } else {
-        let ci = legend.chart;
-        [
-            ci.getDatasetMeta(0),
-            ci.getDatasetMeta(1),
-            ci.getDatasetMeta(2),
-            ci.getDatasetMeta(3),
-            ci.getDatasetMeta(4),
-            ci.getDatasetMeta(5),
-            ci.getDatasetMeta(6),
-            ci.getDatasetMeta(7)
-
-        ].forEach(function(meta) {
-            meta.hidden  === null ? !ci.data.datasets.hidden : null;
-        });
-        ci.update();
-    }
-};
-*/
