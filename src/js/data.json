@@ -1,0 +1,75 @@
+{
+    "type": "start",
+    "timestamp": 2956666666666,
+    "os": "linux",
+    "browser": "firefox",
+    "min_response_time": 0.2,
+    "max_response_time": 0.5,
+    "active": true,
+    "members": [
+      {
+        "type": "data",
+        "timestamp": 2956666666666,
+        "os": "linux",
+        "browser": "firefox",
+        "min_response_time": 0.2,
+        "max_response_time": 0.5
+      }, 
+      {
+        "type": "data",
+        "timestamp": 2956666666666,
+        "os": "linux",
+        "browser": "firefox",
+        "min_response_time": 0.2,
+        "max_response_time": 0.5
+      },
+      {
+        "type": "data",
+        "timestamp": 2956666666666,
+        "os": "linux",
+        "browser": "firefox",
+        "min_response_time": 0.2,
+        "max_response_time": 0.5
+      },
+      {
+        "type": "data",
+        "timestamp": 2956666666666,
+        "os": "linux",
+        "browser": "firefox",
+        "min_response_time": 0.2,
+        "max_response_time": 0.5
+      },
+      {
+        "type": "data",
+        "timestamp": 2956666666666,
+        "os": "linux",
+        "browser": "firefox",
+        "min_response_time": 0.2,
+        "max_response_time": 0.5
+      },
+      {
+        "type": "data",
+        "timestamp": 2956666666666,
+        "os": "linux",
+        "browser": "firefox",
+        "min_response_time": 0.2,
+        "max_response_time": 0.5
+      },
+      {
+        "type": "data",
+        "timestamp": 2956666666666,
+        "os": "linux",
+        "browser": "firefox",
+        "min_response_time": 0.2,
+        "max_response_time": 0.5
+      },
+      {
+        "type": "data",
+        "timestamp": 2956666666666,
+        "os": "linux",
+        "browser": "firefox",
+        "min_response_time": 0.2,
+        "max_response_time": 0.5
+      }
+    ]
+  }
