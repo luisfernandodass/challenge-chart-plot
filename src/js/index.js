@@ -10,32 +10,14 @@ if (navigator.appVersion.indexOf("X11")!=-1) os = "linux";
 
 // let os = navigator.userAgent.slice(13).split(';')[0];
 
-let browser;
-if (navigator.appCodeName.indexOf("Chrome")) browser = "Chrome";
-if (navigator.appCodeName.indexOf("Mozilla")) browser = "Firefox";
-if (navigator.appCodeName.indexOf("X11")) browser = "Safari";
+let browser = navigator.appCodeName;
 
-// let browser = navigator.appCodeName;
-
-console.log(os);
-console.log(browser);
-
-// Passe a função desejada. Se ela esperar parâmetros,
-// passe os parâmetros na sequência. Exemplo:
-// tempoDecorrido(minhaFuncao, 1, true, {teste:10});
 function tempoDecorrido(funcao) {
-  
-  // logo antes da execução
-  
-  var b = now.getMinutes();
+ 
+  var b = now.getSeconds();
 
-  // logo após a execução
   return performance.now() - b;
 }
-
-
-// Testando
-console.log(tempoDecorrido());
 
 function generateChart() {
   const console = document.getElementById('console');
@@ -47,7 +29,8 @@ function generateChart() {
 
   request.responseType = 'json';
   request.send();
-
+  
+  // Below the response loads after request loads first, it's more efficient.
   request.onload = function () {
     const loadConsole = request.response;
 
@@ -59,22 +42,23 @@ function generateChart() {
 
     for (var i = 0; i < fromJson.length; i++) {
       const myArticle = document.createElement('article');
-      const p1 = document.createElement('p');
+      const clientInformation = document.createElement('p');
 
-      p1.textContent =
+      clientInformation.textContent =
         ' type: ' + fromJson[i].type + ',' +
         ' timestamp: ' + timestamp + ',' +
         ' os: ' + os + ',' +
         ' browser: ' + browser + ',' +
         ' min_response_time: ' + tempoDecorrido() + ',' +
-        ' max_response_time: ' + tempoDecorrido();
+        ' max_response_time: ' + tempoDecorrido() + i;
 
-      myArticle.appendChild(p1);
+      myArticle.appendChild(clientInformation);
 
       console.appendChild(myArticle);
     }
   }
 
+  // Below we have the chart
   const context = document.getElementById('myChart').getContext('2d');
   const myChart = new Chart(context, {
     type: 'line',
