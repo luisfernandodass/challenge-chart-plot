@@ -16,9 +16,9 @@ body .console {
   color: white;
   background: #484f58;
   font-family: 'Source Code Pro', monospace;
-  height: 180px;
-  min-height: 180px;
-  max-height: 250px;
+  height: 27vh;
+  min-height: 27vh;
+  max-height: 38vh;
   resize: vertical;
   overflow: scroll;
   overflow-x: hidden;
@@ -26,12 +26,12 @@ body .console {
 }
 
 body .container-canvas {
-  height: 277px;
+  height: 42vh;
   padding: .9rem 4rem 0rem 2rem;
 }
 
 body .container-canvas canvas {
-  max-height: 264px;
+  max-height: 40vh;
   width: 0px;
   /* It's zero because it has to go along the .container-canvas*/
 }
@@ -62,7 +62,7 @@ body #buttonGenerateChart:hover {
 
 body footer {
   background: #dddee1;
-  height: 4.7rem;
+  height: 14.5vh;
   padding: 0rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
