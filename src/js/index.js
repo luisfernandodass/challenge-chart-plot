@@ -11,9 +11,9 @@ if (navigator.appVersion.indexOf("X11")!=-1) os = "linux";
 // let os = navigator.userAgent.slice(13).split(';')[0];
 
 let browser;
-if (navigator.appCodeName.indexOf("Chrome")!=-1) browser = "Chrome";
-if (navigator.appCodeName.indexOf("Mozilla")!=-1) browser = "Mozilla";
-if (navigator.appCodeName.indexOf("X11")!=-1) browser = "Safari";
+if (navigator.appCodeName.indexOf("Chrome")) browser = "Chrome";
+if (navigator.appCodeName.indexOf("Mozilla")) browser = "Firefox";
+if (navigator.appCodeName.indexOf("X11")) browser = "Safari";
 
 // let browser = navigator.appCodeName;
 
@@ -27,7 +27,7 @@ function tempoDecorrido(funcao) {
   
   // logo antes da execução
   
-  var b = now.getSeconds();
+  var b = now.getMinutes();
 
   // logo após a execução
   return performance.now() - b;
@@ -67,7 +67,7 @@ function generateChart() {
         ' os: ' + os + ',' +
         ' browser: ' + browser + ',' +
         ' min_response_time: ' + tempoDecorrido() + ',' +
-        ' max_response_time: ' + fromJson[i].max_response_time;
+        ' max_response_time: ' + tempoDecorrido();
 
       myArticle.appendChild(p1);
 
@@ -120,7 +120,7 @@ function generateChart() {
         },
         {
           label: 'Linux Firefox Min Response Time',
-          data: [2, 18],
+          data: [2, tempoDecorrido()],
           backgroundColor: "#87CEFA",
           borderColor: "#87CEFA",
           fill: false,
@@ -129,8 +129,7 @@ function generateChart() {
         },
         {
           label: 'Linux Firefox Max Response Time',
-          data: [76, 88],
-
+          data: [76, tempoDecorrido()],
           backgroundColor: "#104E8B",
           borderColor: "#104E8B",
           fill: false,
@@ -139,7 +138,7 @@ function generateChart() {
         },
         {
           label: 'Mac Firefox Min Response Time',
-          data: [18, 10],
+          data: [18, tempoDecorrido()],
           backgroundColor: "#FFD700",
           borderColor: "#FFD700",
           fill: false,
@@ -148,7 +147,7 @@ function generateChart() {
         },
         {
           label: 'Mac Firefox Max Response Time',
-          data: [74, 75],
+          data: [74, tempoDecorrido()],
           backgroundColor: "#FF7F00",
           borderColor: "#FF7F00",
           fill: false,
