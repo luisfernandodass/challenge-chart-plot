@@ -69,6 +69,8 @@ body footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 1%;
+  margin-top: 2%;
+  position: fixed;
+  width: 100%;
 }
 /*# sourceMappingURL=index.css.map */
