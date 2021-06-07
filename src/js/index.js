@@ -3,14 +3,39 @@ const buttonGenerateChart = document.getElementById('buttonGenerateChart');
 let now = new Date();
 let timestamp = now.getTime();
 
+let os;
+if (navigator.appVersion.indexOf("Win")!=-1) os = "windows";
+if (navigator.appVersion.indexOf("Mac")!=-1) os = "mac";
+if (navigator.appVersion.indexOf("X11")!=-1) os = "linux";
 
-let os = navigator.userAgent.slice(13).split(';')[0];
+// let os = navigator.userAgent.slice(13).split(';')[0];
 
-let browser = navigator.appCodeName;
+let browser;
+if (navigator.appCodeName.indexOf("Chrome")!=-1) browser = "Chrome";
+if (navigator.appCodeName.indexOf("Mozilla")!=-1) browser = "Mozilla";
+if (navigator.appCodeName.indexOf("X11")!=-1) browser = "Safari";
+
+// let browser = navigator.appCodeName;
 
 console.log(os);
 console.log(browser);
 
+// Passe a função desejada. Se ela esperar parâmetros,
+// passe os parâmetros na sequência. Exemplo:
+// tempoDecorrido(minhaFuncao, 1, true, {teste:10});
+function tempoDecorrido(funcao) {
+  
+  // logo antes da execução
+  
+  var b = now.getSeconds();
+
+  // logo após a execução
+  return performance.now() - b;
+}
+
+
+// Testando
+console.log(tempoDecorrido());
 
 function generateChart() {
   const console = document.getElementById('console');
@@ -30,19 +55,19 @@ function generateChart() {
   }
 
   function consoleInputData(jsonObj) {
-    const heroes = jsonObj['events'];
+    const fromJson = jsonObj['events'];
 
-    for (var i = 0; i < heroes.length; i++) {
+    for (var i = 0; i < fromJson.length; i++) {
       const myArticle = document.createElement('article');
       const p1 = document.createElement('p');
 
       p1.textContent =
-        ' type: ' + heroes[i].type + ',' +
+        ' type: ' + fromJson[i].type + ',' +
         ' timestamp: ' + timestamp + ',' +
         ' os: ' + os + ',' +
         ' browser: ' + browser + ',' +
-        ' min_response_time: ' + heroes[i].min_response_time + ',' +
-        ' max_response_time: ' + heroes[i].max_response_time;
+        ' min_response_time: ' + tempoDecorrido() + ',' +
+        ' max_response_time: ' + fromJson[i].max_response_time;
 
       myArticle.appendChild(p1);
 
@@ -145,15 +170,12 @@ function generateChart() {
           display: true,
           align: 'start',
           position: 'right',
-          // onClick: clickLegend,
-
           labels: {
             boxWidth: 8,
             boxHeight: 8,
             usePointStyle: true,
             color: [
               "black",
-
             ],
             textAlign: 'left',
             padding: 12
@@ -165,13 +187,3 @@ function generateChart() {
 }
 
 buttonGenerateChart.addEventListener('click', generateChart);
-
-/*
-var OSName="Unknown OS";
-if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
-if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
-if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
-if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
-
-document.write('Your OS: '+OSName);
-*/

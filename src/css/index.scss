@@ -16,9 +16,9 @@ body{
         color:white;
 	    background: #484f58;
         font-family: 'Source Code Pro', monospace;
-	   
+	    height: 180px;
 	    min-height: 180px;
-	    max-height: 180px;
+	    max-height: 250px;
 
 	    resize: vertical;
         overflow: scroll;
@@ -30,7 +30,7 @@ body{
     }
 
     .container-canvas{
-	    height: 264px;
+	    height: 277px;
         padding: .9rem 4rem 0rem 2rem;
 
         canvas{
@@ -74,7 +74,7 @@ body{
 
 
 
-	    margin-top: 2%;
+	   
         position:fixed;
         width:100%;
     }
