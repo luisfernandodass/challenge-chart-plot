@@ -12,11 +12,24 @@ if (navigator.appVersion.indexOf("X11")!=-1) os = "linux";
 
 let browser = navigator.appCodeName;
 
-function tempoDecorrido(funcao) {
+function maxResponseTime(funcao) {
  
-  var b = now.getSeconds();
+  const fromJson = jsonObj['events'];
+  for(let i = 0; i <fromJson.lenght; i++){
+    var b = now.getSeconds();
 
-  return performance.now() - b;
+    return performance.now() - i;
+  }
+}
+
+function minResponseTime(funcao) {
+
+  const fromJson = jsonObj['events'];
+  for(let i = 0; i <fromJson.lenght; i--){
+    var b = now.getSeconds();
+
+    return performance.now() - i;
+  }
 }
 
 function generateChart() {
@@ -49,8 +62,8 @@ function generateChart() {
         ' timestamp: ' + timestamp + ',' +
         ' os: ' + os + ',' +
         ' browser: ' + browser + ',' +
-        ' min_response_time: ' + tempoDecorrido() + ',' +
-        ' max_response_time: ' + tempoDecorrido() + i;
+        ' min_response_time: ' + maxResponseTime() + i--
+        ' max_response_time: ' + minResponseTime() + i;
 
       myArticle.appendChild(clientInformation);
 
@@ -68,7 +81,7 @@ function generateChart() {
       datasets: [
         {
           label: 'Linux Chrome Min Response Time',
-          data: [2, 10],
+          data: [2, maxResponseTime()],
           backgroundColor: "#7CCD7C",
           borderColor: "#7CCD7C",
           fill: false,
@@ -77,7 +90,7 @@ function generateChart() {
         },
         {
           label: 'Linux Chrome Max Response Time',
-          data: [80, 75],
+          data: [minResponseTime(), maxResponseTime()],
           backgroundColor: "#008B45",
           borderColor: "#008B45",
           fill: false,
@@ -86,7 +99,7 @@ function generateChart() {
         },
         {
           label: 'Mac Chrome Min Response Time ',
-          data: [10, 2],
+          data: [minResponseTime()), maxResponseTime()],
           backgroundColor: "#8968CD",
           borderColor: "#8968CD",
           fill: false,
@@ -95,7 +108,7 @@ function generateChart() {
         },
         {
           label: 'Mac Chrome Max Response Time ',
-          data: [74, 80],
+          data: [74, maxResponseTime()],
           backgroundColor: "#551A8B",
           borderColor: "#551A8B",
           fill: false,
@@ -104,7 +117,7 @@ function generateChart() {
         },
         {
           label: 'Linux Firefox Min Response Time',
-          data: [2, tempoDecorrido()],
+          data: [2, maxResponseTime()],
           backgroundColor: "#87CEFA",
           borderColor: "#87CEFA",
           fill: false,
@@ -113,7 +126,7 @@ function generateChart() {
         },
         {
           label: 'Linux Firefox Max Response Time',
-          data: [76, tempoDecorrido()],
+          data: [76, maxResponseTime()],
           backgroundColor: "#104E8B",
           borderColor: "#104E8B",
           fill: false,
@@ -122,7 +135,7 @@ function generateChart() {
         },
         {
           label: 'Mac Firefox Min Response Time',
-          data: [18, tempoDecorrido()],
+          data: [18, maxResponseTime()],
           backgroundColor: "#FFD700",
           borderColor: "#FFD700",
           fill: false,
@@ -131,7 +144,7 @@ function generateChart() {
         },
         {
           label: 'Mac Firefox Max Response Time',
-          data: [74, tempoDecorrido()],
+          data: [74, maxResponseTime()],
           backgroundColor: "#FF7F00",
           borderColor: "#FF7F00",
           fill: false,
