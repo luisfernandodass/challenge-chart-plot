@@ -11,6 +11,7 @@ I've used the following tools:
 - Chart.JS
 - Sass
 - Firebase
+- Netlify.app
 
 # Design
 
