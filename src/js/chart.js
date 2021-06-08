@@ -1,24 +1,14 @@
 // Below we have a way to get the operation system from user
 let os;
-if (navigator.appVersion.indexOf("Win")!=-1) os = "windows";
-if (navigator.appVersion.indexOf("Mac")!=-1) os = "mac";
-if (navigator.appVersion.indexOf("X11")!=-1) os = "linux";
+if (navigator.appVersion.indexOf("Win") != -1) os = "windows";
+if (navigator.appVersion.indexOf("Mac") != -1) os = "mac";
+if (navigator.appVersion.indexOf("X11") != -1) os = "linux";
 
 // Below we have a way to get the browser from user
 let browser = navigator.appCodeName;
 
 let now = new Date();
 let timestamp = now.getTime();
-
-function maxResponseTime() { 
-    var b = now.getSeconds() + 10;
-    return b.toString();  
-}
-
-function minResponseTime() {
-    var b = now.getSeconds();
-    return b.toString(); 
-}
 
 // This function generate the chart and the data in console (main function in our app)
 function generateChart() {
@@ -30,7 +20,7 @@ function generateChart() {
 
   request.responseType = 'json';
   request.send();
-  
+
   // Below the response loads after request loads first, it's more efficient.
   request.onload = function () {
     const loadConsole = request.response;
@@ -44,36 +34,47 @@ function generateChart() {
 
     const console = document.getElementById('console');
     const section = document.createElement('section');
-    const typeSpan = document.createElement('p');
-    const typeData = document.createElement('p');
+    const typeStart = document.createElement('p');
+    const typeSpam = document.createElement('p');
     const typeStop = document.createElement('p');
 
-    typeSpan.textContent =
-    ' type: ' + fromJson[1].type + ',' + // we're getting the type 'span' from Json
-    ' timestamp: ' + timestamp + ',' +
-    ' begin: ' + timestamp + ',' +
-    ' end:' + 1819862460000;
+    typeStart.textContent =
+      'type:  start, ' +
+      'timestamp: ' + timestamp +  ',' +
+      'select: ["min_response_time", "max_response_time"], ' +
+      'group: ["os", "browser"] ';
 
-    for (var i = 0; i < fromJson.length; i++) {
-     
-      typeData.textContent = 
-        ' type: ' + fromJson[2].type + ',' + // we're getting the type 'data' from Json
+    typeSpam.textContent =
+      'type: span, ' +
+      'timestamp:  ' + timestamp +  ',' +
+      'begin: ' + timestamp +  ',' +
+      'end: ' + timestamp;
+
+    section.appendChild(typeStart);
+    section.appendChild(typeSpam);
+
+    for (var i = 2; i < fromJson.length - 1; i++) {
+
+      const typeData = document.createElement('p');
+
+      typeData.textContent =
+        ' type: ' + fromJson[i].type + ',' + // we're getting the type 'data' from Json
         ' timestamp: ' + timestamp + ',' +
-        ' os: ' + os + ',' +
-        ' browser: ' + browser + ',' +
-        ' min_response_time: ' + minResponseTime() + ',' +
-        ' max_response_time: ' + maxResponseTime();
-    }  
-    
-    typeStop.textContent =
-    ' type: ' + fromJson[10].type + ',' + // we're getting the type 'stop' from Json
-    ' timestamp: ' + timestamp ;
+        ' os: ' + fromJson[i].os + ',' +
+        ' browser: ' + fromJson[i].browser + ',' +
+        ' min_response_time: ' + fromJson[i].min_response_time + ',' +
+        ' max_response_time: ' + fromJson[i].max_response_time;
 
-    section.appendChild(typeSpan);  
-    section.appendChild(typeData);
+      section.appendChild(typeData);
+    }
+
+    typeStop.textContent =
+      'type:  stop, ' +
+      'timestamp: 1519862400000';
+
     section.appendChild(typeStop);
-  
-    console.appendChild(section); 
+
+    console.appendChild(section);
   }
 
   // Below we have the chart (the only thing that I don't need to refactor)
@@ -82,7 +83,7 @@ function generateChart() {
     type: 'line',
     data: {
 
-      labels: [ minResponseTime(),  maxResponseTime()],
+      labels: [maxResponseTime(), maxResponseTime()],
       datasets: [
         {
           label: 'Linux Chrome Min Response Time',
@@ -176,10 +177,8 @@ function generateChart() {
             boxHeight: 8,
             usePointStyle: true,
             color: [
-              "black",
+              "#3f4a60",
             ],
-            textAlign: 'left',
-            padding: 12
           }
         }
       },
