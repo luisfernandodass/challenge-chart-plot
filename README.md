@@ -27,6 +27,10 @@ I've used the following tools:
 
 - I've used a JSON array and traveled it 
 
+# Image
+
+![Screenshot_2021-06-08 Luis's Challenge](https://user-images.githubusercontent.com/67171626/121264880-44327200-c88e-11eb-8212-450f9f41f4c0.png)
+
 
 # Plotting a chart
 
