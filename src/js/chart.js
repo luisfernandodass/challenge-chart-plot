@@ -1,6 +1,6 @@
 /* 
 Below we have a way to get the operation system from user
-svb
+
 let os;
 if (navigator.appVersion.indexOf("Win") != -1) os = "windows";
 if (navigator.appVersion.indexOf("Mac") != -1) os = "mac";
@@ -42,16 +42,16 @@ function generateChart() {
     const typeStop = document.createElement('p');
 
     typeStart.textContent =
-      'type:  start, ' +
-      'timestamp: ' + timestamp +  ',' +
-      'select: ["min_response_time", "max_response_time"], ' +
-      'group: ["os", "browser"] ';
+      ' type:  start, ' +
+      ' timestamp: ' + timestamp +  ',' +
+      ' select: ["min_response_time", "max_response_time"], ' +
+      ' group: ["os", "browser"] ';
 
     typeSpam.textContent =
-      'type: span, ' +
-      'timestamp:  ' + timestamp +  ',' +
-      'begin: ' + timestamp +  ',' +
-      'end: ' + timestamp;
+      ' type: span, ' +
+      ' timestamp:  ' + timestamp +  ',' +
+      ' begin: ' + timestamp +  ',' +
+      ' end: ' + timestamp;
 
     section.appendChild(typeStart);
     section.appendChild(typeSpam);
@@ -90,7 +90,7 @@ function generateChart() {
       datasets: [
         {
           label: 'Linux Chrome Min Response Time',
-          data: [2, 10],
+          data: [0.1, 1.3],
           backgroundColor: "#7CCD7C",
           borderColor: "#7CCD7C",
           fill: false,
@@ -99,7 +99,7 @@ function generateChart() {
         },
         {
           label: 'Linux Chrome Max Response Time',
-          data: [48, 75],
+          data: [0.2, 0.9],
           backgroundColor: "#008B45",
           borderColor: "#008B45",
           fill: false,
@@ -108,7 +108,7 @@ function generateChart() {
         },
         {
           label: 'Mac Chrome Min Response Time ',
-          data: [20, 8],
+          data: [0.1,1.0],
           backgroundColor: "#8968CD",
           borderColor: "#8968CD",
           fill: false,
@@ -117,7 +117,7 @@ function generateChart() {
         },
         {
           label: 'Mac Chrome Max Response Time ',
-          data: [74, 65],
+          data: [0.2, 1.2],
           backgroundColor: "#551A8B",
           borderColor: "#551A8B",
           fill: false,
@@ -126,7 +126,7 @@ function generateChart() {
         },
         {
           label: 'Linux Firefox Min Response Time',
-          data: [2, 12],
+          data: [0.1, 1.0],
           backgroundColor: "#87CEFA",
           borderColor: "#87CEFA",
           fill: false,
@@ -135,7 +135,7 @@ function generateChart() {
         },
         {
           label: 'Linux Firefox Max Response Time',
-          data: [76, 50],
+          data: [0.3, 1.4],
           backgroundColor: "#104E8B",
           borderColor: "#104E8B",
           fill: false,
@@ -144,7 +144,7 @@ function generateChart() {
         },
         {
           label: 'Mac Firefox Min Response Time',
-          data: [18, 30],
+          data: [0.2, 1.1],
           backgroundColor: "#FFD700",
           borderColor: "#FFD700",
           fill: false,
@@ -153,7 +153,7 @@ function generateChart() {
         },
         {
           label: 'Mac Firefox Max Response Time',
-          data: [74, 80],
+          data: [0.2, 1.2],
           backgroundColor: "#FF7F00",
           borderColor: "#FF7F00",
           fill: false,
