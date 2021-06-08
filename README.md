@@ -1,3 +1,25 @@
+# Host
+
+If you want to access this quickly, use: https://chartplot.netlify.app/, so click on the button "Generate Chart"
+
+# Tools
+
+I've used the following tools:
+
+- Chart.JS
+- Sass
+- Firebase
+
+# Design
+
+- I've chosen for this challenge, the Intelie's colors.
+- I put some shadow in the button.
+
+# Security
+
+- I put a login page to secure, for that, I've used Firebase.
+
+
 # Plotting a chart
 
 In this challenge, you will implement a web application that plots a line chart based on some manually input data.
