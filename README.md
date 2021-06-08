@@ -27,7 +27,6 @@ I've used the following tools:
 
 - I've used a JSON array and traveled it 
 
---
 
 # Plotting a chart
 
