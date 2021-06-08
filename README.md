@@ -1,7 +1,7 @@
 # Host
 
 - If you want to access this quickly, use: https://chartplot.netlify.app/
-- Put the following e-mail: luisfernandodass@gmail.com and enter.
+- Put the following, e-mail: luisfernandodass@gmail.com and password: intelie
 - Click on the button "Generate Chart"
 
 # Tools
