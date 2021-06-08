@@ -61,7 +61,7 @@ function generateChart() {
         ' timestamp: ' + timestamp + ',' +
         ' os: ' + os + ',' +
         ' browser: ' + browser + ',' +
-        ' min_response_time: ' + minResponseTime() + 
+        ' min_response_time: ' + minResponseTime() + ',' +
         ' max_response_time: ' + maxResponseTime();
     }  
     

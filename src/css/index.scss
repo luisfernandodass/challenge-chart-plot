@@ -1,0 +1,78 @@
+    body {
+    background: #43b8c7;
+    margin: auto 20px;  
+    font-family: 'Source Sans Pro', sans-serif;
+
+  #title {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-top: 5%;
+  }
+  
+  form{
+     width: 18rem;
+     display: block;
+     
+     margin-right: auto;
+     margin-left: auto; 
+  
+  #inputEmail, #inputPassword{
+    height: 2rem;
+    width: 97%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    padding-left: .5rem;
+  }
+  
+  #errorLogin{
+     color: red;
+     font-size: 15px;
+     font-weight: 700;
+    
+     display: block;
+     margin-top: 10%;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+  }
+  
+  label{
+    margin-left: 0.8%;
+  }
+}
+  
+  button{ 
+     width: 18rem;  
+     padding: .6rem;
+    
+     background: #3f4a60;
+     color: #ffff;
+     border: 0;
+  
+     display: block;
+     margin-right: auto;
+     margin-left: auto;
+  
+     font-size: 1rem;
+     font-weight: bold;
+  
+      margin-top: 5%;
+  
+      margin-bottom: 5%;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px black;
+  }
+  button:hover{
+    background: #4682B4;   
+  }
+  footer { 
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    margin-top:3%;
+  }
+}
+  /*# sourceMappingURL=main.css.map */

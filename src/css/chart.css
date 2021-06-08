@@ -5,7 +5,7 @@ body {
 
 body nav {
   background: #43b8c7;
-  color: black;
+  color: #3f4a60;
   padding: 1rem 2rem;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
@@ -54,6 +54,8 @@ body #buttonGenerateChart {
   border: 0;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-box-shadow: 1px 1px 3px black;
+          box-shadow: 1px 1px 3px black;
 }
 
 body #buttonGenerateChart:hover {
