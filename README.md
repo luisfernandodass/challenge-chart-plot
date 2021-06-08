@@ -1,6 +1,8 @@
 # Host
 
-If you want to access this quickly, use: https://chartplot.netlify.app/, so click on the button "Generate Chart"
+1 - If you want to access this quickly, use: https://chartplot.netlify.app/
+2 - Put the following e-mail: luisfernandodass@gmail.com and enter.
+3 - Click on the button "Generate Chart"
 
 # Tools
 
