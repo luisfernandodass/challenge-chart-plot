@@ -1,76 +1,83 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
-body nav {
-  background: #dddee1;
-  color: black;
-  padding: 1rem 2rem;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-body .console {
-  color: white;
-  background: #484f58;
-  font-family: 'Source Code Pro', monospace;
-  height: 27vh;
-  min-height: 27vh;
-  max-height: 38vh;
-  resize: vertical;
-  overflow: scroll;
-  overflow-x: hidden;
-  padding: 1rem 1rem;
-}
-
-body .container-canvas {
-  height: 42vh;
-  padding: .9rem 4rem 0rem 2rem;
-}
-
-body .container-canvas canvas {
-  max-height: 40vh;
-  width: 0px;
-  /* It's zero because it has to go along the .container-canvas*/
-}
-
-body #buttonGenerateChart {
-  background: #1E90FF;
-  color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 2.5rem;
-  padding: 1rem;
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-body #buttonGenerateChart:hover {
-  background: #4682B4;
-}
-
-body footer {
-  background: #dddee1;
-  height: 14.5vh;
-  padding: 0rem 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  width: 100%;
-}
-/*# sourceMappingURL=index.css.map */
+* {
+    color: black;
+    font-family: 'Public Sans', sans-serif;
+  }
+  
+  body {
+    background: #CDAA7D;
+    margin: auto 20px;  
+  }
+  
+  #title {
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    color: white;
+    font-size: 3rem;
+    margin-top: 5%;
+  }
+  
+  form{
+     width: 18rem;
+     display: block;
+     
+     margin-right: auto;
+     margin-left: auto; 
+  }
+  
+  #inputEmail, #inputPassword{
+    height: 2rem;
+    width: 97%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    padding-left: .5rem;
+  }
+  
+  #errorLogin{
+     color: red;
+     font-size: 15px;
+     font-weight: 700;
+    
+     display: block;
+     margin-top: 10%;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+  }
+  
+  label{
+    margin-left: 0.8%;
+  }
+  
+  button{ 
+     width: 18rem;
+    
+     padding: .6rem;
+    
+     background: #32CD32;
+     color: #ffff;
+     border: 0;
+  
+     display: block;
+     margin-right: auto;
+     margin-left: auto;
+  
+     font-size: 1rem;
+     font-weight: bold;
+  
+      margin-top: 5%;
+  
+      margin-bottom: 5%;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px black;
+  }
+  button:hover{
+    background-color: #399142; 
+   
+  }
+  footer { 
+    text-align: center;
+    font-size: 10px;
+  }
+  /*# sourceMappingURL=main.css.map */

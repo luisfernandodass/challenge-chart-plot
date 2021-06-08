@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body nav {
+  background: #43b8c7;
+  color: black;
+  padding: 1rem 2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+body .console {
+  color: white;
+  background: #3f4a60;
+  font-family: 'Source Code Pro', monospace;
+  height: 27vh;
+  min-height: 27vh;
+  max-height: 38vh;
+  resize: vertical;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 1rem 1rem;
+}
+
+body .container-canvas {
+  height: 42vh;
+  padding: .9rem 4rem 0rem 2rem;
+}
+
+body .container-canvas canvas {
+  max-height: 40vh;
+  width: 0px;
+  /* It's zero because it has to go along the .container-canvas*/
+}
+
+body #buttonGenerateChart {
+  background: #3f4a60;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.5rem;
+  padding: 1rem;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body #buttonGenerateChart:hover {
+  background: #4682B4;
+}
+
+body footer {
+  background: #43b8c7;
+  height: 14.5vh;
+  padding: 0rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+}
+/*# sourceMappingURL=chart.css.map */

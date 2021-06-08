@@ -3,7 +3,7 @@ body{
 	padding: 0; 
 
     nav{
-        background: rgb(221,222,225);
+        background:#43b8c7;
         color: black;
         padding: 1rem 2rem;
         
@@ -14,7 +14,7 @@ body{
 
     .console{
         color:white;
-	    background: #484f58;
+	    background: #3f4a60;
         font-family: 'Source Code Pro', monospace;
 	    height: 27vh;
 	    min-height: 27vh;
@@ -40,7 +40,7 @@ body{
     }
 
     #buttonGenerateChart{
-	    background: #1E90FF;
+	    background:#3f4a60;
 	    color: white;
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 15px;
@@ -64,7 +64,7 @@ body{
     }
 
     footer{
-	    background: rgb(221,222,225);
+	    background:#43b8c7;
 	
 	    height: 14.5vh;
 	    padding: 0rem 2rem;
