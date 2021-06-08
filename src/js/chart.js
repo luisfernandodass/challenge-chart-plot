@@ -1,8 +1,11 @@
-// Below we have a way to get the operation system from user
+/* 
+Below we have a way to get the operation system from user
+svb
 let os;
 if (navigator.appVersion.indexOf("Win") != -1) os = "windows";
 if (navigator.appVersion.indexOf("Mac") != -1) os = "mac";
 if (navigator.appVersion.indexOf("X11") != -1) os = "linux";
+*/
 
 // Below we have a way to get the browser from user
 let browser = navigator.appCodeName;
@@ -83,7 +86,7 @@ function generateChart() {
     type: 'line',
     data: {
 
-      labels: [maxResponseTime(), maxResponseTime()],
+      labels: ['00:00', '00:01'],
       datasets: [
         {
           label: 'Linux Chrome Min Response Time',
