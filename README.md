@@ -18,6 +18,7 @@ I've used the following tools:
 - I've chosen for this challenge, the Intelie's colors.
 - I put some shadow in the button.
 - I put a button to sync, but it still doesn't work.
+- There is resize on the "console"
 
 # Security
 
