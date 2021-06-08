@@ -59,6 +59,7 @@ body button {
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 3px black;
           box-shadow: 1px 1px 3px black;
+  cursor: pointer;
 }
 
 body button:hover {

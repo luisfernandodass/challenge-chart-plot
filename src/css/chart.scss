@@ -37,6 +37,18 @@ body{
         }
     }
 
+    footer{
+	    background:#43b8c7;
+	
+	    height: 14.5vh;
+	    padding: 0rem 2rem;
+
+	    display: flex;
+	    align-items: center;
+  
+        position:fixed;
+        width:100%;
+
     #buttonGenerateChart{
 	    background:#3f4a60;
 	    color: white;
@@ -63,16 +75,17 @@ body{
 	    background: #4682B4;
     }
 
-    footer{
-	    background:#43b8c7;
-	
-	    height: 14.5vh;
-	    padding: 0rem 2rem;
+    .sync{
+        color: rgba(0, 0, 0, 0.5);
+        margin-left:1%;
+        padding: .50rem;
+        cursor: pointer;
+        border-radius: 5px;    
+    }
 
-	    display: flex;
-	    align-items: center;
-  
-        position:fixed;
-        width:100%;
+    .sync:hover{
+       background:  rgba(0, 0, 0, 0.1);
+       color: white;
+    }
     }
 }

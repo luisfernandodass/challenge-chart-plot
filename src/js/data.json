@@ -2,8 +2,8 @@
   {
     "type": "start",
     "timestamp": 1519862400000,
-    "select": ["min_response_time", "max_response_time"],
-    "group": ["os", "browser"]
+    "select": ["min_response_time", " max_response_time"],
+    "group": ["os", " browser"]
   },
   {
     "type": "span",

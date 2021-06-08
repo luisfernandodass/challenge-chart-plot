@@ -7,7 +7,7 @@ var errorLogin = document.getElementById("errorLogin");
 btnLogin.addEventListener('click', function(){
 
   firebase.auth().signInWithEmailAndPassword(inputEmail.value, inputPassword.value).then(function(result){
-      window.location.replace('chart.html')
+      window.location.replace('public/chart.html')
   })
   .catch(function (error) {
     var errorCode = error.code;
@@ -17,4 +17,3 @@ btnLogin.addEventListener('click', function(){
 
   });
 });
-

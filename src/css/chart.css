@@ -36,7 +36,21 @@ body .container-canvas canvas {
   /* It's zero because it has to go along the .container-canvas*/
 }
 
-body #buttonGenerateChart {
+body footer {
+  background: #43b8c7;
+  height: 14.5vh;
+  padding: 0rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+}
+
+body footer #buttonGenerateChart {
   background: #3f4a60;
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
@@ -58,21 +72,20 @@ body #buttonGenerateChart {
           box-shadow: 1px 1px 3px black;
 }
 
-body #buttonGenerateChart:hover {
+body footer #buttonGenerateChart:hover {
   background: #4682B4;
 }
 
-body footer {
-  background: #43b8c7;
-  height: 14.5vh;
-  padding: 0rem 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  width: 100%;
+body footer .sync {
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 1%;
+  padding: .50rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+body footer .sync:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: white;
 }
 /*# sourceMappingURL=chart.css.map */
