@@ -23,7 +23,7 @@ I've used the following tools:
 
 # Using Json
 
-- I've used a JSON array and traveled it from the index 2 position, getting everything with the "type:data"
+- I've used a JSON array and traveled it 
 
 --
 
