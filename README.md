@@ -19,7 +19,7 @@ I've used the following tools:
 
 # Security
 
-- I put a login page to secure, for that, I've used Firebase.
+- I put a login page to give security, for that, I've used Firebase.
 
 # Using Json
 
