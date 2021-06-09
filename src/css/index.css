@@ -1,75 +1,74 @@
 body {
+  margin: 0;
+  padding: 0;
+}
+
+body nav {
   background: #43b8c7;
-  margin: auto 20px;
+  color: #3f4a60;
+  padding: 1rem 2rem;
   font-family: 'Source Sans Pro', sans-serif;
-}
-
-body #title {
-  text-align: center;
-  color: white;
-  font-size: 3rem;
-  margin-top: 5%;
-}
-
-body form {
-  width: 18rem;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-body form #inputEmail, body form #inputPassword {
-  height: 2rem;
-  width: 97%;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  margin-top: 1%;
-  margin-bottom: 1%;
-  border-radius: 5px;
-  padding-left: .5rem;
-}
-
-body form #errorLogin {
-  color: red;
-  font-size: 15px;
+  font-size: 24px;
   font-weight: 700;
-  display: block;
-  margin-top: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
-body form label {
-  margin-left: 0.8%;
+body .console {
+  font-family: 'Source Code Pro', monospace;
+  min-height: 29vh;
+  max-height: 40vh;
+  resize: vertical;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
-body button {
-  width: 18rem;
-  padding: .6rem;
-  background: #3f4a60;
-  color: #ffff;
-  border: 0;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 3px black;
-          box-shadow: 1px 1px 3px black;
-  cursor: pointer;
+body .container-canvas {
+  height: 45vh;
+  padding: .9rem 4rem 0rem 2rem;
 }
 
-body button:hover {
-  background: #4682B4;
+body .container-canvas canvas {
+  max-height: 40vh;
+  width: 0px;
+  /* It's zero because it has to go along the .container-canvas*/
 }
 
 body footer {
+  background: #43b8c7;
+  height: 14.5vh;
+  padding: 0rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+}
+
+body footer #buttonGenerateChart {
+  background: #3f4a60;
   color: white;
-  text-align: center;
-  font-size: 16px;
-  margin-top: 3%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.5rem;
+  padding: 1rem;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 3px black;
+          box-shadow: 1px 1px 3px black;
+}
+
+body footer #buttonGenerateChart:hover {
+  background: #4682B4;
 }
 /*# sourceMappingURL=index.css.map */

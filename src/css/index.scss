@@ -1,79 +1,76 @@
-    body {
-    background: #43b8c7;
-    margin: auto 20px;  
-    font-family: 'Source Sans Pro', sans-serif;
+body{
+    margin: 0;
+	padding: 0; 
 
-  #title {
-    text-align: center;
-    color: white;
-    font-size: 3rem;
-    margin-top: 5%;
-  }
-  
-  form{
-     width: 18rem;
-     display: block;
-     
-     margin-right: auto;
-     margin-left: auto; 
-  
-  #inputEmail, #inputPassword{
-    height: 2rem;
-    width: 97%;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    margin-top: 1%;
-    margin-bottom: 1%;
-    border-radius: 5px;
-    padding-left: .5rem;
-  }
-  
-  #errorLogin{
-     color: red;
-     font-size: 15px;
-     font-weight: 700;
+    nav{
+        background:#43b8c7;
+        color: #3f4a60;
+        padding: 1rem 2rem;
+        
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .console{
+        font-family: 'Source Code Pro', monospace;
+	    
+	    min-height: 29vh;
+	    max-height: 40vh;
     
-     display: block;
-     margin-top: 10%;
-     margin-left: auto;
-     margin-right: auto;
-     text-align: center;
-  }
+
+	    resize: vertical;
+        overflow: scroll;
+        overflow-x: hidden;
+        
+    }
+
+    .container-canvas{
+	    height: 45vh;
+        padding: .9rem 4rem 0rem 2rem;
+
+        canvas{
+            max-height: 40vh;
+            width: 0px; /* It's zero because it has to go along the .container-canvas*/
+        }
+    }
+
+    footer{
+	    background:#43b8c7;
+	
+	    height: 14.5vh;
+	    padding: 0rem 2rem;
+
+	    display: flex;
+	    align-items: center;
   
-  label{
-    margin-left: 0.8%;
-  }
+        position:fixed;
+        width:100%;
+
+    #buttonGenerateChart{
+	    background:#3f4a60;
+	    color: white;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 15px;
+	    font-weight: 700;
+	    text-transform: uppercase;
+	
+	    display: flex;
+	    align-items: center;
+
+	    height: 2.5rem;
+        padding: 1rem;
+
+	    border: 0;
+	    border-radius: 5px;
+
+	    cursor: pointer;
+
+        box-shadow: 1px 1px 3px black;
+    }
+
+    #buttonGenerateChart:hover{
+	    background: #4682B4;
+    }
+    }
 }
-  
-  button{ 
-     width: 18rem;  
-     padding: .6rem;
-    
-     background: #3f4a60;
-     color: #ffff;
-     border: 0;
-  
-     display: block;
-     margin-right: auto;
-     margin-left: auto;
-  
-     font-size: 1rem;
-     font-weight: bold;
-  
-      margin-top: 5%;
-  
-      margin-bottom: 5%;
-      border-radius: 5px;
-      box-shadow: 1px 1px 3px black;
-      cursor: pointer;
-  }
-  button:hover{
-    background: #4682B4;   
-  }
-  footer { 
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    margin-top:3%;
-  }
-}
-  /*# sourceMappingURL=main.css.map */
