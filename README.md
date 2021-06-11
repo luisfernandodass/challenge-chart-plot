@@ -1,3 +1,11 @@
+# Libraries
+
+I've used the following libraries:
+
+- Monaco Editor
+- Chart.JS
+- Sass
+
 # Host
 
  If you want to access this quickly, use: https://chartplot.netlify.app/
@@ -12,14 +20,6 @@
 # Image
 
 ![image](https://user-images.githubusercontent.com/67171626/121744563-7b489380-cad9-11eb-8c0c-353996928111.png)
-
-# Libraries
-
-I've used the following libraries:
-
-- Monaco Editor
-- Chart.JS
-- Sass
 
 # Plotting a chart
 
