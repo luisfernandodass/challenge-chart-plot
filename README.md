@@ -7,20 +7,19 @@
 {type: 'span', timestamp: 1519780251293, begin: 1519780251293, end: 1519780260201}
 {type: 'data', timestamp: 1519780251000, os: 'Linux', browser: 'Chrome', min_response_time: 0.1, max_response_time: 1.3}
 ``` 
- Click on the button "Generate Chart"
-
-# Tools
-
-I've used the following tools:
-
-- Chart.JS
-- Sass
-- Monaco Editor
+ Click on the button "Generate Chart" and you'll see the same output below in the image
 
 # Image
 
-![Screenshot_2021-06-08 Luis's Challenge](https://user-images.githubusercontent.com/67171626/121264880-44327200-c88e-11eb-8212-450f9f41f4c0.png)
+![image](https://user-images.githubusercontent.com/67171626/121744563-7b489380-cad9-11eb-8c0c-353996928111.png)
 
+# Libraries
+
+I've used the following libraries:
+
+- Monaco Editor
+- Chart.JS
+- Sass
 
 # Plotting a chart
 
