@@ -13,16 +13,15 @@ body{
     }
 
     .console{
+        background: "#7CCD7C";
         font-family: 'Source Code Pro', monospace;
 	    
 	    min-height: 29vh;
 	    max-height: 40vh;
     
-
 	    resize: vertical;
-        overflow: scroll;
-        overflow-x: hidden;
-        
+        overflow-y: hidden;
+        overflow-x: hidden;     
     }
 
     .container-canvas{
