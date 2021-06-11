@@ -20,8 +20,8 @@ require(['vs/editor/editor.main'], function() {
           labels: [getBegin(), getEnd()],
           datasets: [
             {
-              label: getOs() + ' ' + getBrowser(),
-              data: [getMinTime(), getMaxTime()],
+              label: getEventType(),
+              data: [getBegin(), getEnd()],
               backgroundColor: "#7CCD7C",
               borderColor: "#7CCD7C",
               fill: false,
@@ -90,39 +90,19 @@ require(['vs/editor/editor.main'], function() {
      }
 
     function getOs(){
-      let codeFromUser = editor.getValue(); // Return the text in the code editor
-      // array.push(jsonCode);    
-      let os = codeFromUser.substr(129, 5);
-      console.log(codeFromUser.substr(129, 5));
 
-      return os;
     }
 
     function getBrowser(){
-      let codeFromUser = editor.getValue(); // Return the text in the code editor
-      // array.push(jsonCode);    
-      let browser = codeFromUser.substr(147, 6);
-      console.log(codeFromUser.substr(147, 6));
 
-      return browser;
     }
 
     function getMinTime(){
-      let codeFromUser = editor.getValue(); // Return the text in the code editor
-      // array.push(jsonCode);    
-      let minTime = codeFromUser.substr(175, 3);
-      console.log(codeFromUser.substr(175, 3));
 
-      return minTime;
     }
 
     function getMaxTime(){
-      let codeFromUser = editor.getValue(); // Return the text in the code editor
-      // array.push(jsonCode);    
-      let maxTime = codeFromUser.substr(199, 3);
-      console.log(codeFromUser.substr(199, 3));
-
-      return maxTime;
+      
     }
 
 //{type:'span', timestamp: 1519780251293, begin: 1519780251293, end: 1519780260201}
