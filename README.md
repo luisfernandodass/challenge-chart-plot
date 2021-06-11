@@ -1,12 +1,12 @@
 # Host
 
-If you want to access this quickly, use: https://chartplot.netlify.app/
-Put the following text
+ If you want to access this quickly, use: https://chartplot.netlify.app/
+ Put the following text
 ```
 {type: 'span', timestamp: 1519780251293, begin: 1519780251293, end: 1519780260201}
 {type: 'data', timestamp: 1519780251000, os: 'linux', browser: 'chrome', min_response_time: 0.1, max_response_time: 1.3}
 ``` 
-Click on the button "Generate Chart"
+ Click on the button "Generate Chart"
 
 # Tools
 
