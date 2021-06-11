@@ -130,4 +130,5 @@ require(['vs/editor/editor.main'], function() {
 
 const buttonGenerateChart = document.getElementById('buttonGenerateChart');
 buttonGenerateChart.addEventListener('click', generateChart);
+
 });
