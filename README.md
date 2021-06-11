@@ -1,37 +1,25 @@
-# Host
+# Libraries
 
-- If you want to access this quickly, use: https://chartplot.netlify.app/
-- Put the following, e-mail: luisfernandodass@gmail.com, password: intelie , so enter.
-- Click on the button "Generate Chart"
+I've used the following libraries:
 
-# Tools
-
-I've used the following tools:
-
+- Monaco Editor
 - Chart.JS
 - Sass
-- Firebase
-- Netlify.app
 
-# Design
+# Host
 
-- I've chosen for this challenge, the Intelie's colors.
-- I put some shadow in the button.
-- I put a button to sync, but it still doesn't work.
-- There is resize on the "console"
-
-# Security
-
-- I put a login page to give security, for that, I've used Firebase.
-
-# Using Json
-
-- I've used a JSON array and traveled it 
+ If you want to access this quickly, use: https://chartplot.netlify.app/
+ 
+ Put the following text
+```
+{type: 'span', timestamp: 1519780251293, begin: 1519780251293, end: 1519780260201}
+{type: 'data', timestamp: 1519780251000, os: 'Linux', browser: 'Chrome', min_response_time: 0.1, max_response_time: 1.3}
+``` 
+ Click on the button "Generate Chart" and you'll see the same output below in the image
 
 # Image
 
-![Screenshot_2021-06-08 Luis's Challenge](https://user-images.githubusercontent.com/67171626/121264880-44327200-c88e-11eb-8212-450f9f41f4c0.png)
-
+![image](https://user-images.githubusercontent.com/67171626/121744563-7b489380-cad9-11eb-8c0c-353996928111.png)
 
 # Plotting a chart
 
