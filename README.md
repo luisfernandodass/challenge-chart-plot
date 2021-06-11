@@ -1,7 +1,11 @@
 # Host
 
 - If you want to access this quickly, use: https://chartplot.netlify.app/
-- Put the following, e-mail: luisfernandodass@gmail.com, password: intelie , so enter.
+- Put the following text
+```
+{type: 'span', timestamp: 1519780251293, begin: 1519780251293, end: 1519780260201}
+{type: 'data', timestamp: 1519780251000, os: 'linux', browser: 'chrome', min_response_time: 0.1, max_response_time: 1.3}
+``` 
 - Click on the button "Generate Chart"
 
 # Tools
@@ -10,23 +14,7 @@ I've used the following tools:
 
 - Chart.JS
 - Sass
-- Firebase
-- Netlify.app
-
-# Design
-
-- I've chosen for this challenge, the Intelie's colors.
-- I put some shadow in the button.
-- I put a button to sync, but it still doesn't work.
-- There is resize on the "console"
-
-# Security
-
-- I put a login page to give security, for that, I've used Firebase.
-
-# Using Json
-
-- I've used a JSON array and traveled it 
+- Monaco Editor
 
 # Image
 
